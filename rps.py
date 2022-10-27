@@ -3,7 +3,9 @@ simplicity sake, the game with be the best out of 5 to allow the bot more data t
 but future files will provide the bot with playing strats.
 """
 import random
+choicebank=[]
 def play_rps(round=0,p1_rounds=0,p2_rounds=0):
+	print(choicebank)
 	score=[p1_rounds,p2_rounds]
 	if p1_rounds==3 or p2_rounds==3:
 		if max(p1_rounds,p2_rounds)==p1_rounds:
@@ -15,7 +17,8 @@ def play_rps(round=0,p1_rounds=0,p2_rounds=0):
 	rps=['ROCK','PAPER','SCISSOR']
 	print(f'SCORE: \n PLAYER1: {p1_rounds} vs BOT:{p2_rounds}')
 	print('\n')
-	player1_choice=input('What is your move human?\n')
+	player1_choice=input('What is your move human?\n').upper()
+	choicebank.append(player1_choice)
 	if player1_choice not in rps:
 		print(f'{player1_choice} is not a valid move. Please type one of the following options {rps}')
 		play_rps(rounds,p1_rounds,p2_rounds)
