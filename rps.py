@@ -3,6 +3,9 @@ simplicity sake, the game with be the best out of 5 to allow the bot more data t
 but future files will provide the bot with playing strats.
 """
 import random
+outcomes=open('outcomes.txt','a')
+
+
 choicebank=[]
 def play_rps(round=0,p1_rounds=0,p2_rounds=0):
 	print(choicebank)
@@ -24,6 +27,7 @@ def play_rps(round=0,p1_rounds=0,p2_rounds=0):
 		play_rps(rounds,p1_rounds,p2_rounds)
 	player2_choice=random.choice(rps)
 	print('\n\n')
+	outcomes.write(f'{player1_choice},{player2_choice}\n')
 	if player1_choice==player2_choice:
 		print(f"Great minds think alike! You both picked {player1_choice}!")
 		play_rps(round,p1_rounds,p2_rounds)
