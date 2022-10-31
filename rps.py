@@ -3,6 +3,8 @@ simplicity sake, the game with be the best out of 5 to allow the bot more data t
 but future files will provide the bot with playing strats.
 """
 import random
+from tkinter import *
+from PIL import ImageTk,Image
 outcomes=open('outcomes.txt','a')
 
 
