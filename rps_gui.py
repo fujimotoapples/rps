@@ -2,9 +2,17 @@ from tkinter import *
 from PIL import ImageTk,Image
 #display
 root=Tk()
+#import images from PNG
 rock_img=ImageTk.PhotoImage(Image.open('rock.png').resize((50,50)))
 scissor_img = ImageTk.PhotoImage(Image.open('scissor.png').resize((50,50)))
 paper_img = ImageTk.PhotoImage(Image.open('paper.png').resize((50,50)))
+def update_scoreboard():
+	return
+def update_scoreboard():
+	return
+def update_scoreboard():
+	return 
+
 ROCK_BUTTON=Button(root,image=rock_img)
 ROCK_BUTTON.grid(row=1,column=0)
 PAPER_BUTTON=Button(image=paper_img)
